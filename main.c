@@ -27,15 +27,13 @@ int main(){
 	// Защита системы от недопустимых значений
     for(int i=0;i<a;i++)
     {
-        while(variety2[i] != 0)
+	int k=0;  
+      while(variety2[i] != 0)
         {
             if(variety2[i]%10 == 0 || variety2[i]%10 == 1 || variety2[i]%10 == -1){
-                variety3[i]*=10;
-                variety3[i] += variety2[i]%10;
-                
-            }
-            
-            
+                variety3[i] += variety2[i]%10 *pow(10,k);
+            k++;
+       	}
             variety2[i]/=10;
         }
     }
